@@ -102,7 +102,7 @@ details ul{margin:10px 0 4px;padding-left:20px;display:flex;flex-direction:colum
   <header>
     <span class="eyebrow">5 minutes · every weeknight</span>
     <h1>Dinner Table English</h1>
-    <p>One word game a night for a 5th grader and a 7th grader. Read it before dinner, then play.</p>
+    <p>One word game a night for Tomas (5th grade) and Sofia (7th grade). Read it before dinner, then play.</p>
   </header>
 
   <section class="pickers" aria-label="Choose a lesson">
@@ -302,7 +302,7 @@ function renderLesson(){
       <h2>${les.t}</h2>
       <span class="goal">Builds: ${GOALS[state.di]}</span>
     </div>
-    <ul class="rows">${les.rows.map(([k,v])=>`<li class="row"><span class="lab ${k==="7th"?"k7":""}">${k}</span><div><p>${v}</p></div></li>`).join("")}</ul>
+    <ul class="rows">${les.rows.map(([k,v])=>`<li class="row"><span class="lab ${k==="7th"?"k7":""}">${({"5th":"Tomas","7th":"Sofia"})[k]||k}</span><div><p>${v}</p></div></li>`).join("")}</ul>
     <div class="timer">
       <output id="clock">5:00</output>
       <button class="btn solid" id="tStart" type="button">Start 5 minutes</button>
@@ -328,12 +328,13 @@ function setupTimer(){
 
 // ---- Word Jar scores
 const GOAL = 50;
-let scores = {players:[{name:"5th grader",points:0},{name:"7th grader",points:0},{name:"Parent",points:0}], jars:0};
+let scores = {players:[{name:"Tomas",points:0},{name:"Sofia",points:0},{name:"Parent",points:0}], jars:0};
 const LS_KEY="dte-scores";
 let db=null, ref=null, saveTimer=null, dirty=false;
 const statusEl=document.getElementById("saveStatus");
 
 try{ const s=JSON.parse(localStorage.getItem(LS_KEY)||"null"); if(s&&Array.isArray(s.players)) scores=s; }catch(e){}
+scores.players.forEach(p=>{if(p.name==="5th grader")p.name="Tomas";if(p.name==="7th grader")p.name="Sofia";});
 
 function total(){return scores.players.reduce((a,p)=>a+(+p.points||0),0);}
 function renderJar(){
