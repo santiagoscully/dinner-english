@@ -328,13 +328,14 @@ function setupTimer(){
 
 // ---- Word Jar scores
 const GOAL = 50;
-let scores = {players:[{name:"Tomas",points:0},{name:"Sofia",points:0},{name:"Parent",points:0}], jars:0};
+let scores = {players:[{name:"Tomas",points:0},{name:"Sofia",points:0},{name:"Santi",points:0},{name:"Dani",points:0}], jars:0};
 const LS_KEY="dte-scores";
 let db=null, ref=null, saveTimer=null, dirty=false;
 const statusEl=document.getElementById("saveStatus");
 
 try{ const s=JSON.parse(localStorage.getItem(LS_KEY)||"null"); if(s&&Array.isArray(s.players)) scores=s; }catch(e){}
-scores.players.forEach(p=>{if(p.name==="5th grader")p.name="Tomas";if(p.name==="7th grader")p.name="Sofia";});
+scores.players.forEach(p=>{if(p.name==="5th grader")p.name="Tomas";if(p.name==="7th grader")p.name="Sofia";if(p.name==="Parent")p.name="Santi";});
+if(!scores.players.some(p=>p.name==="Dani"))scores.players.push({name:"Dani",points:0});
 
 function total(){return scores.players.reduce((a,p)=>a+(+p.points||0),0);}
 function renderJar(){
