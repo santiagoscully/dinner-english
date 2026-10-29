@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#2E7A70">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAJ3UlEQVR4Xu3dfXAU5R0H8OcCF4gQAoGgkrsLBEhjyjDjy0CZMi1MRiyUChEEKnSKCrVgscIMtkgdVHQcpWFqFIgNrylNG2mZ4mDLIAgU5E3FgoWB5uXCW0BeLndJCEnMJR26dd3b4273iZfb32/z/fwl597e7bPffJ+9fS4Tx/DnnxUAt5OAYYFIEA5AOEAemgPQHCAPzQFoDpCH5gA0B8hDcwCaA+ShOQDNAfLQHIDmAHloDkBzgDw0B6A5QB6aA9AcIA/NAWgOkIfmADQHyENzAJoD5KE5AM0B8rrKP8Ua27+1xZoX7hgTzzzaMTuOJUwrgGkF5KE5AM0B8tAcgOYAeWgOQHOAPDQHoDlAHpoD0Bwgj0dzHFj6kvyhkcbiiKivyrIYxPZRDm30q8va9/Q4IN0cNk6GivIx0g0H5VGLLbJH6qD5JzXIjlfHITi/UGyOTpgMISgeNblwdM5kKKgdO7lwAB20wkHtRyf+SI0AoXCQGhcL0RkHQuEAahAOiIhKOOh0KQVERoNKOIAghAMiInH7PD4tOucXCw8e+Vg3EksXL5w5bQrNgFh+Q72zNMeBQ0fCkyGEKK/00kwGBZ0iHK2trflvrb7tcCMcUXSKcGz7+44zZRW3HYWKyioKP6M02T8cjU1NBWvWqqOflNQ9NbWP+k9/IHDd56N5bixn/3AU/+ndL65cUQf64Qk/yHC5tONejvKIgPp3SL+hGn9g7cbN6k66JCQ8MevHBYVFn534XH2wvNI78oH7zLxQhbdq5+69x46f8J495w8EmhqbunXv1jslJXNgxsgH7vvR+If6p/Uzsx8ubB6O1UXr62/c0NaG25XudqVrT0+F1/iy48rVa8vfyP9w34G2tjbtcxsabjY03Ky+dPnAoSOrijY898unZ0zN43LuDdk5HOfOXyjduk0dAqfTOW/u40KIgR5PyLRSYfBp9uz5C7PmzDe8NGlsbHz59fyUlF7jH8w1HHcW7HzNsfLtwpaWFvU0THtkkmvA3f8Lhzv0miNaOILB4DOLn9clw+1KH5c7dsqkiTnZWbrTnP/WGhYn3gzbNsfxz0/u/HCvOgQ97rhj3pOzlX8OyghpDn8g4PPVaD/CaO3YtaesolJ9xOFwvPDcoulTJjscDuXBZa++seVv76kbVF+6XOGtGjxooJnRJ862zbHizbe1Q//ETx5L7dNbeSQ5uaf634qyyOWR0iv5p49NH5c7dviwnP5p/cbljpkxNU9NhhBi+pTJunNcfeky8bNukj2bY9fefx47/vXnkX59U2fPnKEdkYEZHl+NX32kwlsV6QPL6FEjR48aGWU0+/ROifJ/WbNhcwSDwZWhE//8OY8nJXUPCYfMZUd0lzU3URSu9AGsM6GyYThKt26rOndePcIMt+vRvId1Z0t32VHxDZbfysq/viIRQnRLTPSEflTmy27Tyo2GhtVrN2jPx7Pzn+rSpUv0cERffgsGg0c//ezYv06UVXovVlfX1tXX19c3NTcHW4ItwVu0Ox86ODP85ZiyWzjWbvqjz1ejPRkLl7wglhicnRr/7T+wNDY1FZeUbtj850BtrcEuvvLtnGyTW9Jnq3BcuXptU0lp+wa93Fs1QrMgJ4Tw1fh/9syiU6f/I7XDYfcgHCQVFBY1Nja2762VV3pH3H+v9rmLf/OiLhnD7sme9sik7Kwhd991Z6IzUQhx4uSpuQsWaZ81DM1BUFlF5bbt/2j3G9Ndkx46+smho59o9zZ39qyFT/9ct/+Tp89oH+nerduQzEHtfg/U2Gda+W3B6mBrqzq+o0eNnDxxfJThfmd9sfbWp+6adNeefdrn9uqVvOCpOeF7e3/HB9oHs7OG2uZqVAi7hOPIx5/uP3hYPU8JCQm/Wrgg+j3sjw4d1YZDtzZ79vwF7VlP69u3a1f9D9JHh0P2IIStrkaFsMV9jra2thUFq7Tn8qHcsYarGx53yMK9r8avvWd682bItcuFi9XapX8hxBdXr/562Su6LhlqoznFJuHYvmOn9srR4XDMm/P/NbYoPO6Q74PpvomeFvq1nabm5iUvvqJ8oG1ra9t/8PDMJ+dd9/mSk3tqX8LptM80bYdppbn5yzfXFOlqw8xVoSf0y4JC3JpZ1A8so78zYufuPdrd7t67f+/+gwPuujNQV1dbWyeEGHH/va70AVvfe1/dbF1xiRDiy5Zg3sTxTqczWjY5YH/7fHPpFu0qqMnaEEJkeMKaQ7M0f+urpmHVEgwGz1+sVpLhcbtWvrY8KSlJe5Yrq84uffm15a/nh1+gcMQ7HIHa2nc2FGvHfVzumKGDM82ciZ49eugWVLXXpImJzjW/W6F8OSjc8GE5f/j9qtQ+vfMmTghviL6pfbRr+nzxniML122qq6tXR/9WbXz1jR4zMtzuGn9A3VL3aXagx721ZGPJu3/9YM8+79lzrcHWtLR+WUMyJ/9wwpjvfbdLwq2fq5zsrJJ1hYXrN/775Olr1687nc7+/dMeHPt9M69OXyf6XVl28LuyQBfLacX/lxzdiPaeeirKGHPf3irMwhF+mhXK4+ER4b69tTh9Wol0plW6Dbhvbzk24TA809oKUbvEkLpbavungE04IP4QDogI4QD+4Yj+YVWlbsZ9ewo4NYfh+dZtwH17yzG7z6Gcb/M3tbhvby1m4VAYVoIO9+2twmlagThDOCAiltOK+WsOBfftrcIsHNwX0mTfv7U4TSuGyx9YeIstNuEwTIZuBuG+PQVswgHxh3BARAgH8A+HybucWHiLIU7NYZgPLLzFFrP7HNwX0mTfv7WYhUNhWCE63Le3CqdpBeIM4YCIWE4r3BfSZN+/VZiFQ3bhivv21uI0rRgul2DhLbbYhMMwGQqyv8Em+/4pYBMOiD+EAyJCOIB/OEze5cTCWwxxag7DfGDhLbaY3eeQXbjivr21mIVDYVghOty3twqnaQXiDOGAiFhOK7ILV9y3twqzcHBfSJN9/9biNK0YLk9g4S222ITDMBkKLLzFEJtwQPwhHBARiXBY/rcjCKIwJiTCYYbJu5xYeIshNuEwc9ccC2+xReIvNSkOLH3J5LFxv6ll+P4pzClc/3SoySlGxX17q3CaViDOCIWDSJdajs44EAqHEITGxSp0kmGTv2UPHYRWc3Ty8iBVG0Sbg9oYxQfBoybXHAqCI9WhaB4v0XB0qnzQTAbRaUVFdtRiiPIxErp9HoX5O+uMUI6Fgu60okV/HGWxOCIezaHFukVYZELFLxwqRinhlQk7hAM6Go9rDrAEwgERIRyAcIA8NAegOUAemgPQHCAPzQFoDpCH5gA0B8hDcwCaA+ShOQDNAfLQHIDmAHloDkBzgDw0B6A5QB6aA9AcIA/NAWgOkIfmADQHyPsvRpJxU4iysAYAAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}</style>
+<title>Dinner Table English</title>
+<meta name="apple-mobile-web-app-title" content="Dinner English">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* Layout: one narrow column like a placemat — tonight's lesson on top, the word jar scoreboard under it. */
+:root{
+  --bg:#F2F5F1; --surface:#FFFFFF; --ink:#1C2A2D; --muted:#5B6B6A; --line:#D8E0DA;
+  --accent:#2E7A70; --accent-ink:#FFFFFF; --bean:#E2A11B; --bean-soft:#FBEFD2; --tag:#E5EFEC; --danger:#B4452F;
+  --display:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121A1B; --surface:#1B2527; --ink:#E8EFEC; --muted:#9DB0AC; --line:#2C3A3C;
+  --accent:#5BBDAF; --accent-ink:#0E1717; --bean:#F0B53A; --bean-soft:#3A2F17; --tag:#22332F; --danger:#E7866F; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#121A1B; --surface:#1B2527; --ink:#E8EFEC; --muted:#9DB0AC; --line:#2C3A3C;
+  --accent:#5BBDAF; --accent-ink:#0E1717; --bean:#F0B53A; --bean-soft:#3A2F17; --tag:#22332F; --danger:#E7866F; color-scheme:dark }
+
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.5}
+.wrap{max-width:640px;margin:0 auto;padding-block:20px 48px;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));
+  display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:2rem;font-weight:800;letter-spacing:-.01em}
+h2{font-size:1.35rem;font-weight:800}
+h3{font-size:1.05rem;font-weight:600}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+header{display:flex;flex-direction:column;gap:6px}
+header p{margin:0;color:var(--muted)}
+
+/* pickers */
+.pickers{display:flex;flex-direction:column;gap:10px}
+.seg{display:flex;gap:6px;flex-wrap:wrap}
+.seg button{font:inherit;font-size:.95rem;font-weight:700;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);
+  border-radius:999px;padding:6px 14px;cursor:pointer;min-height:40px}
+.seg button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.seg button:focus-visible,.btn:focus-visible,.pts button:focus-visible,input:focus-visible{outline:3px solid var(--bean);outline-offset:2px}
+.today-note{font-size:.9rem;color:var(--muted);margin:0}
+
+/* lesson */
+.lesson{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:16px}
+.lesson-head{display:flex;flex-direction:column;gap:4px}
+.goal{font-size:.9rem;color:var(--muted)}
+.rows{display:flex;flex-direction:column;gap:14px;margin:0;padding:0;list-style:none}
+.row{display:grid;grid-template-columns:78px 1fr;gap:10px;align-items:start}
+.row > div{min-width:0}
+.lab{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:6px;padding:3px 6px;text-align:center;background:var(--tag);color:var(--accent);margin-top:2px}
+.lab.k7{background:var(--bean-soft);color:var(--ink)}
+.row p{margin:0}
+.say{display:inline-block;font-size:.88rem;font-weight:700;background:var(--bean-soft);border-radius:6px;padding:0 6px;white-space:nowrap}
+em{font-style:italic}
+.timer{display:flex;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px dashed var(--line);padding-top:14px}
+.timer output{font-family:var(--display);font-size:1.6rem;font-weight:800;font-variant-numeric:tabular-nums;min-width:4ch}
+.btn{font:inherit;font-weight:700;border-radius:12px;padding:8px 16px;border:1.5px solid var(--accent);background:transparent;color:var(--accent);cursor:pointer;min-height:42px}
+.btn.solid{background:var(--accent);color:var(--accent-ink)}
+.btn.quiet{border-color:var(--line);color:var(--muted)}
+.btn.danger{border-color:var(--danger);color:var(--danger)}
+
+/* jar */
+.jar{display:flex;flex-direction:column;gap:16px}
+.jar-top{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}
+.total{font-family:var(--display);font-size:2.4rem;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.total small{font-size:1rem;color:var(--muted);font-weight:600}
+.beans{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;background:var(--surface);border:1px solid var(--line);border-radius:14px 14px 22px 22px;padding:12px}
+.bean{aspect-ratio:1.3/1;max-width:100%;border-radius:50%;background:var(--line);transition:background .25s}
+.bean.on{background:var(--bean)}
+.players{display:flex;flex-direction:column;gap:10px}
+.player{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 12px}
+.player input{font:inherit;font-weight:700;border:none;background:transparent;color:var(--ink);width:100%;min-width:0;padding:4px 2px;border-bottom:1px dashed var(--line)}
+.pts{display:flex;align-items:center;gap:8px}
+.pts button{font:inherit;font-size:1.3rem;font-weight:800;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.pts button.plus{background:var(--bean);border-color:var(--bean);color:#2A1E05}
+.pts span{font-family:var(--display);font-weight:800;font-size:1.3rem;min-width:2.2ch;text-align:center;font-variant-numeric:tabular-nums}
+.jar-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.confirm{display:flex;gap:10px;align-items:center;flex-wrap:wrap;background:var(--bean-soft);border-radius:12px;padding:10px 12px}
+.status{font-size:.85rem;color:var(--muted);margin:0}
+.win{background:var(--bean-soft);border-radius:14px;padding:14px;font-weight:700}
+
+/* extras */
+details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+summary{font-family:var(--display);font-weight:600;font-size:1.05rem;cursor:pointer}
+details ul{margin:10px 0 4px;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+@media (prefers-reduced-motion: reduce){.bean{transition:none}}
+</style>
+</head>
+<body>
+
+
+<div class="wrap" id="app" hidden>
+  <header>
+    <span class="eyebrow">5 minutes · every weeknight</span>
+    <h1>Dinner Table English</h1>
+    <p>One word game a night for a 5th grader and a 7th grader. Read it before dinner, then play.</p>
+  </header>
+
+  <section class="pickers" aria-label="Choose a lesson">
+    <div class="seg" id="weeks" role="group" aria-label="Week"></div>
+    <div class="seg" id="days" role="group" aria-label="Day"></div>
+    <p class="today-note" id="todayNote"></p>
+  </section>
+
+  <article class="lesson" id="lesson" aria-live="polite"></article>
+
+  <section class="jar" aria-labelledby="jarTitle">
+    <div class="jar-top">
+      <div>
+        <span class="eyebrow" id="jarTitle">Word Jar</span>
+        <div class="total"><span id="total">0</span> <small>/ <span id="goal">50</span> beans</small></div>
+      </div>
+      <p class="status" id="saveStatus"></p>
+    </div>
+    <div class="beans" id="beans" aria-hidden="true"></div>
+    <div class="win" id="win" hidden>The jar is full! Pick a treat or a movie together, then start a new jar.</div>
+    <div class="players" id="players"></div>
+    <div class="jar-actions">
+      <button class="btn quiet" id="resetBtn" type="button">Empty the jar</button>
+      <span class="status" id="jarsDone"></span>
+    </div>
+    <div class="confirm" id="confirm" hidden>
+      <span>Start a new jar? Everyone goes back to 0.</span>
+      <button class="btn danger" id="confirmYes" type="button">Yes, empty it</button>
+      <button class="btn quiet" id="confirmNo" type="button">Cancel</button>
+    </div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:12px">
+    <h2>More for you</h2>
+    <details>
+      <summary>Games for any night (no prep)</summary>
+      <ul>
+        <li><strong>Alphabet Food:</strong> name foods A to Z around the table. Apple, banana, carrot… Stuck = skip.</li>
+        <li><strong>Would You Rather:</strong> answer in a full sentence with "because." "I would rather fly because…"</li>
+        <li><strong>My Day in 3 Words:</strong> no "good" or "fine." Try <em>busy, hilarious, exhausting</em>.</li>
+        <li><strong>New Word Hunt:</strong> each kid brings one new word from a book, show or game to Sunday dinner.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Tips for you as a parent learning English too</summary>
+      <ul>
+        <li>You don't need to be the expert. Say: "Let's figure it out together." Kids love being the teacher.</li>
+        <li>Pronunciation is split into parts, like <span class="say">CUR-ee-us</span>. Say the CAPITAL part louder.</li>
+        <li>Ask "How do you say this word?" It makes them think about sounds and spelling.</li>
+        <li>Ask "What is this word in our language?" Knowing two languages is a strength.</li>
+        <li>If someone is tired, skip the game. Just ask: "What's one interesting word you heard today?"</li>
+      </ul>
+    </details>
+  </section>
+</div>
+
+<script>
+const S = (t)=>`<span class="say">${t}</span>`;
+const DAYS = ["Monday","Tuesday","Wednesday","Thursday","Friday"];
+const GAMES = ["Word of the Week","Word Parts","Funny Phrases","Talk Game","Word Race"];
+const GOALS = ["New vocabulary","Figuring out new words alone","Real-life English","Speaking and sentences","Speed and word choice"];
+
+// rows: [label, html]  label: "5th" | "7th" | other
+const L = [
+ [ // Week 1
+  {t:"curious", rows:[
+   ["5th",`<em>curious</em> ${S("CUR-ee-us")} = wanting to know or learn something. "I'm curious about what's for dessert."`],
+   ["7th",`<em>inquisitive</em> ${S("in-KWIZ-ih-tiv")} = always asking questions to learn more.`],
+   ["Play","Each person says one thing they are curious about. Then ask: \"Is a cat curious? Is a rock curious?\" Kids answer and explain why."],
+   ["Points","All week: 1 bean every time someone uses the word correctly."]]},
+  {t:"un- and mis-", rows:[
+   ["5th",`<em>un-</em> means "not." unhappy, unfair, unlock, unusual.`],
+   ["7th",`<em>mis-</em> means "wrong." mistake, misread, misunderstand, misbehave.`],
+   ["Play","Take turns adding un- or mis- to a word. Each real word = 1 bean. Silly fake words (\"unpizza\") get a laugh, no bean."]]},
+  {t:"a piece of cake", rows:[
+   ["Phrase",`<em>a piece of cake</em> = something very easy. "The spelling test was a piece of cake."`],
+   ["Play","Let them guess the meaning first. Then each person names one thing that is a piece of cake for them, and one that is NOT."],
+   ["7th",`<em>break the ice</em> = do something to help people relax when they first meet.`]]},
+  {t:"Story Chain", rows:[
+   ["Play","One person says the first sentence of a story. The next adds one sentence. Go around 3 times."],
+   ["Rule","The story must use <em>curious</em> (5th) or <em>inquisitive</em> (7th) at least once."],
+   ["Start","\"One night, a curious dog found a strange box in the yard…\""]]},
+  {t:"Bigger words", rows:[
+   ["Play","\"How many words mean <strong>big</strong>?\" Take turns. Each new word = 1 bean."],
+   ["Help",`large, huge, giant, enormous ${S("ee-NOR-mus")}, gigantic ${S("jy-GAN-tik")}, massive, colossal ${S("kuh-LOSS-ul")}`],
+   ["7th","Put the words in order from a little big to VERY big."]]}
+ ],
+ [ // Week 2
+  {t:"generous", rows:[
+   ["5th",`<em>generous</em> ${S("JEN-er-us")} = happy to give or share. "Grandma is generous with her cookies."`],
+   ["7th",`<em>benevolent</em> ${S("buh-NEV-uh-lent")} = kind and wanting to help others.`],
+   ["Play","Each person tells one generous thing someone did for them. Then: \"Who is the most generous character in a movie you know?\""],
+   ["Points","All week: 1 bean for using the word."]]},
+  {t:"-ful, -less, -ology", rows:[
+   ["5th",`<em>-ful</em> = "full of," <em>-less</em> = "without." careful/careless, hopeful/hopeless, fearful/fearless.`],
+   ["7th",`<em>-ology</em> = "the study of." biology (life), geology (rocks and earth), zoology (animals).`],
+   ["Play","You say a word (care, help, color, use, pain). Kids say the -ful and -less versions. The 7th grader invents a funny -ology: <em>pizzaology</em>."]]},
+  {t:"under the weather", rows:[
+   ["Phrase",`<em>under the weather</em> = feeling a little sick. "I feel under the weather today."`],
+   ["Play","Guess first. Then everyone makes their best \"under the weather\" face."],
+   ["7th",`<em>hit the books</em> = study hard. Ask: "When do you need to hit the books this week?"`]]},
+  {t:"Don't Say It!", rows:[
+   ["Play","One person thinks of a thing (banana, school bus, soccer) and describes it without saying the word. Others guess."],
+   ["Rule","No pointing. The 5th grader gets 3 hints, the 7th grader only 2."],
+   ["Points","1 bean to the guesser and 1 to the describer."]]},
+  {t:"Sound-alike words", rows:[
+   ["5th",`<em>there</em> (a place), <em>their</em> (belongs to them), <em>they're</em> (they are). Also <em>to, too, two</em>.`],
+   ["Play","Say a sentence. Kids spell the right word in the air or on a napkin. \"___ dog is so cute.\" (their)"],
+   ["7th",`<em>affect</em> (to change, a verb) vs. <em>effect</em> (the result, a noun). "The rain affected the game. The effect was a muddy field."`]]}
+ ],
+ [ // Week 3
+  {t:"determined", rows:[
+   ["5th",`<em>determined</em> ${S("dee-TER-mind")} = you decided to do something and won't give up.`],
+   ["7th",`<em>persevere</em> ${S("per-suh-VEER")} = keep trying even when it is hard.`],
+   ["Play","Each person tells about a time they were determined. Then: \"Who in our family is the most determined? Why?\""],
+   ["Points","All week: 1 bean for using the word."]]},
+  {t:"port and rupt", rows:[
+   ["5th",`<em>port</em> means "carry." transport, portable, import, export, airport.`],
+   ["7th",`<em>rupt</em> means "break." erupt, interrupt, disrupt.`],
+   ["Play","Look around: \"What is portable here?\" (phone, plate, backpack). The 7th grader explains why it's rude to <em>interrupt</em>, using the word part."]]},
+  {t:"spill the beans", rows:[
+   ["Phrase",`<em>spill the beans</em> = tell a secret. "Don't spill the beans about the surprise party!"`],
+   ["Play","Guess first. Then each person spills the beans about something small and funny."],
+   ["7th",`<em>cost an arm and a leg</em> = very expensive.`]]},
+  {t:"Fix My Sentence", rows:[
+   ["Play","You say a sentence with one mistake on purpose. The kids are the teachers and fix it."],
+   ["Try","\"Yesterday I go to the store.\" (went) · \"She have two dogs.\" (has) · \"This soup is more better.\" (better)"],
+   ["7th","Explain <em>why</em> it was wrong."],
+   ["You","Great for you too: they practice grammar and you learn."]]},
+  {t:"Opposite Tennis", rows:[
+   ["Play","\"Hit\" a word across the table. The kid hits back the opposite, fast. Then they serve one to you."],
+   ["5th","brave/afraid, ancient/modern, generous/selfish, noisy/silent, arrive/depart"],
+   ["7th",`expand/shrink, ally/enemy, optimistic ${S("op-tih-MIS-tik")} / pessimistic ${S("pes-ih-MIS-tik")}, visible/invisible`]]}
+ ],
+ [ // Week 4
+  {t:"cautious", rows:[
+   ["5th",`<em>cautious</em> ${S("KAW-shus")} = careful to avoid danger or mistakes. "Be cautious when you cross the street."`],
+   ["7th",`<em>meticulous</em> ${S("meh-TIK-yoo-lus")} = very careful about every small detail.`],
+   ["Play","\"Cautious or not?\" Name an action (riding a bike with no helmet, checking homework twice). Kids shout \"cautious!\" or \"not cautious!\""],
+   ["Points","All week: 1 bean for using the word."]]},
+  {t:"pre-, bio, graph", rows:[
+   ["5th",`<em>pre-</em> means "before." preview, preheat, prepay, prehistoric.`],
+   ["7th",`<em>bio</em> = "life," <em>graph</em> = "write." biography, autograph, biology.`],
+   ["Play","\"What happens pre-dinner in our house?\" Then the 7th grader guesses what <em>photograph</em> means (photo = light: \"writing with light\")."]]},
+  {t:"once in a blue moon", rows:[
+   ["Phrase",`<em>once in a blue moon</em> = almost never. "I clean my room once in a blue moon."`],
+   ["Play","Guess first. Then each person names something they do once in a blue moon."],
+   ["7th",`<em>the ball is in your court</em> = now it's your turn to decide or act.`]]},
+  {t:"Teach Me!", rows:[
+   ["Play","Each kid teaches you one new word from school or a book this week: the meaning, a sentence, and how to say it."],
+   ["You","Repeat it back. Try to use it before dinner ends."],
+   ["Points","2 beans if the parent uses their word in a sentence by the end of dinner."]]},
+  {t:"Hot, hotter, hottest", rows:[
+   ["Play","Say the words mixed up. First kid to put them in order gets a bean."],
+   ["5th",`warm → hot → burning · tired → sleepy → exhausted ${S("ig-ZAWS-tid")} · good → great → amazing`],
+   ["7th",`annoyed → angry → furious → livid · cool → cold → freezing → frigid ${S("FRIJ-id")}`]]}
+ ]
+];
+
+// ---- which lesson is today: 4-week cycle starting Monday Oct 26, 2026
+const ANCHOR = new Date(2026,9,26);
+function todayPick(){
+  const now = new Date(); const d0 = new Date(now.getFullYear(),now.getMonth(),now.getDate());
+  let days = Math.floor((d0 - ANCHOR)/86400000);
+  let dow = d0.getDay(); // 0 Sun
+  let weekend = (dow===0||dow===6);
+  if (weekend) days += (dow===6?2:1); // jump to next Monday
+  const wk = ((Math.floor(days/7)%4)+4)%4;
+  const di = weekend ? 0 : dow-1;
+  return {wk, di, weekend};
+}
+const pick = todayPick();
+let state = {wk:pick.wk, di:pick.di};
+
+const weeksEl = document.getElementById("weeks"), daysEl = document.getElementById("days");
+function renderPickers(){
+  weeksEl.innerHTML = [0,1,2,3].map(i=>`<button type="button" data-w="${i}" aria-pressed="${i===state.wk}">Week ${i+1}</button>`).join("");
+  daysEl.innerHTML = DAYS.map((d,i)=>`<button type="button" data-d="${i}" aria-pressed="${i===state.di}">${d.slice(0,3)}</button>`).join("");
+  const isToday = state.wk===pick.wk && state.di===pick.di;
+  document.getElementById("todayNote").textContent = isToday
+    ? (pick.weekend ? "It's the weekend, no lesson. Here is Monday's so you can prep." : "This is tonight's lesson.")
+    : "";
+  if(!isToday){
+    const b=document.createElement("button"); b.className="btn quiet"; b.type="button"; b.textContent="Back to tonight";
+    b.style.cssText="min-height:34px;padding:4px 12px;font-size:.9rem"; b.onclick=()=>{state={wk:pick.wk,di:pick.di};render();};
+    document.getElementById("todayNote").appendChild(b);
+  }
+}
+weeksEl.addEventListener("click",e=>{const b=e.target.closest("button");if(b){state.wk=+b.dataset.w;render();}});
+daysEl.addEventListener("click",e=>{const b=e.target.closest("button");if(b){state.di=+b.dataset.d;render();}});
+
+function renderLesson(){
+  const les = L[state.wk][state.di];
+  document.getElementById("lesson").innerHTML = `
+    <div class="lesson-head">
+      <span class="eyebrow">Week ${state.wk+1} · ${DAYS[state.di]} · ${GAMES[state.di]}</span>
+      <h2>${les.t}</h2>
+      <span class="goal">Builds: ${GOALS[state.di]}</span>
+    </div>
+    <ul class="rows">${les.rows.map(([k,v])=>`<li class="row"><span class="lab ${k==="7th"?"k7":""}">${k}</span><div><p>${v}</p></div></li>`).join("")}</ul>
+    <div class="timer">
+      <output id="clock">5:00</output>
+      <button class="btn solid" id="tStart" type="button">Start 5 minutes</button>
+      <button class="btn quiet" id="tReset" type="button">Reset</button>
+    </div>`;
+  setupTimer();
+}
+function render(){ renderPickers(); renderLesson(); }
+
+// ---- 5 minute timer
+let tId=null, left=300;
+function fmt(s){return Math.floor(s/60)+":"+String(s%60).padStart(2,"0");}
+function setupTimer(){
+  clearInterval(tId); tId=null; left=300;
+  const c=document.getElementById("clock"), st=document.getElementById("tStart");
+  st.onclick=()=>{
+    if(tId){clearInterval(tId);tId=null;st.textContent="Keep going";return;}
+    st.textContent="Pause";
+    tId=setInterval(()=>{left--;c.textContent=fmt(left);if(left<=0){clearInterval(tId);tId=null;c.textContent="Done!";st.textContent="Start 5 minutes";left=300;}},1000);
+  };
+  document.getElementById("tReset").onclick=()=>{clearInterval(tId);tId=null;left=300;c.textContent="5:00";st.textContent="Start 5 minutes";};
+}
+
+// ---- Word Jar scores
+const GOAL = 50;
+let scores = {players:[{name:"5th grader",points:0},{name:"7th grader",points:0},{name:"Parent",points:0}], jars:0};
+const LS_KEY="dte-scores";
+let db=null, ref=null, saveTimer=null, dirty=false;
+const statusEl=document.getElementById("saveStatus");
+
+try{ const s=JSON.parse(localStorage.getItem(LS_KEY)||"null"); if(s&&Array.isArray(s.players)) scores=s; }catch(e){}
+
+function total(){return scores.players.reduce((a,p)=>a+(+p.points||0),0);}
+function renderJar(){
+  const t=total();
+  document.getElementById("total").textContent=t;
+  document.getElementById("goal").textContent=GOAL;
+  document.getElementById("beans").innerHTML=Array.from({length:GOAL},(_,i)=>`<span class="bean ${i<t?"on":""}"></span>`).join("");
+  document.getElementById("win").hidden = t<GOAL;
+  document.getElementById("jarsDone").textContent = scores.jars ? `Jars filled so far: ${scores.jars}` : "";
+  const box=document.getElementById("players");
+  const active=document.activeElement && document.activeElement.dataset.name;
+  if(active!==undefined){ // don't rebuild while someone types a name
+    scores.players.forEach((p,i)=>{const s=box.querySelector(`[data-pts="${i}"]`); if(s) s.textContent=p.points;}); return;
+  }
+  box.innerHTML=scores.players.map((p,i)=>`
+    <div class="player">
+      <input id="pname${i}" data-name="${i}" value="${(p.name||"").replace(/"/g,"&quot;")}" aria-label="Player name" maxlength="20">
+      <div class="pts">
+        <button type="button" data-minus="${i}" aria-label="Take a bean from ${p.name}">−</button>
+        <span data-pts="${i}">${p.points}</span>
+        <button type="button" class="plus" data-plus="${i}" aria-label="Give a bean to ${p.name}">+</button>
+      </div>
+    </div>`).join("");
+}
+function changed(){
+  renderJar();
+  try{localStorage.setItem(LS_KEY,JSON.stringify(scores));}catch(e){}
+  if(!ref){ statusEl.textContent="Saved on this phone"; return; }
+  dirty=true; statusEl.textContent="Saving…";
+  clearTimeout(saveTimer);
+  saveTimer=setTimeout(async()=>{
+    try{ await ref.set(JSON.parse(JSON.stringify(scores))); dirty=false; statusEl.textContent="Saved · same on every device you sign in on"; }
+    catch(e){ dirty=false; statusEl.textContent = e&&e.code==="invalid_argument" ? "View only: ask the owner to add points" : "Couldn't save just now. Try again."; }
+  },700);
+}
+document.getElementById("players").addEventListener("click",e=>{
+  const b=e.target.closest("button"); if(!b) return;
+  if(b.dataset.plus!==undefined){scores.players[+b.dataset.plus].points++;}
+  else if(b.dataset.minus!==undefined){const p=scores.players[+b.dataset.minus]; p.points=Math.max(0,p.points-1);}
+  else return;
+  changed();
+});
+document.getElementById("players").addEventListener("change",e=>{
+  const i=e.target.dataset.name; if(i===undefined) return;
+  scores.players[+i].name=e.target.value.trim()||"Player"; e.target.blur(); changed();
+});
+const confirmEl=document.getElementById("confirm");
+document.getElementById("resetBtn").onclick=()=>{confirmEl.hidden=false;};
+document.getElementById("confirmNo").onclick=()=>{confirmEl.hidden=true;};
+document.getElementById("confirmYes").onclick=()=>{
+  if(total()>=GOAL) scores.jars=(scores.jars||0)+1;
+  scores.players.forEach(p=>p.points=0); confirmEl.hidden=true; changed();
+};
+
+render(); renderJar();
+statusEl.textContent="Saved on this phone";
+
+</script>
+
+
+<style>
+.gate{min-height:100%;display:flex;align-items:center;justify-content:center;padding-block:40px;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.gate form{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:12px;width:100%;max-width:360px}
+.gate img{width:64px;height:64px;border-radius:14px}
+.gate input{font:inherit;font-size:1.1rem;padding:10px 12px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink)}
+.gate .err{color:var(--danger);font-size:.9rem;margin:0;min-height:1.2em}
+html,body{height:100%}
+</style>
+<div class="gate" id="gate">
+  <form id="gateForm">
+    <img src="data:image/png;base64,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" alt="">
+    <h1 style="font-size:1.6rem">Dinner Table English</h1>
+    <label for="code">Family passcode</label>
+    <input id="code" type="password" autocomplete="current-password" autocapitalize="none" spellcheck="false">
+    <p class="err" id="err" aria-live="polite"></p>
+    <button class="btn solid" type="submit">Open</button>
+  </form>
+</div>
+<script>
+(function(){
+  const H="28b5e47bfc25241a7d4c4b4c3924bb9675fae36e1c98894ec8eb15f6d0dca23a", KEY="dte-unlocked";
+  const gate=document.getElementById("gate"), app=document.getElementById("app");
+  function open(){gate.hidden=true;app.hidden=false;}
+  try{ if(localStorage.getItem(KEY)===H){open();return;} }catch(e){}
+  async function sha(t){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(t));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("");}
+  document.getElementById("gateForm").addEventListener("submit",async e=>{
+    e.preventDefault();
+    const v=document.getElementById("code").value.trim().toLowerCase();
+    if(await sha(v)===H){ try{localStorage.setItem(KEY,H);}catch(_){} open(); }
+    else document.getElementById("err").textContent="That passcode isn't right. Try again.";
+  });
+})();
+</script>
+
+</body>
+</html>
