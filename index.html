@@ -345,14 +345,15 @@ if(!scores.done||typeof scores.done!=="object") scores.done=Object.assign({},STA
 scores.players.forEach(p=>{if(p.name==="5th grader")p.name="Tomas";if(p.name==="7th grader")p.name="Sofia";if(p.name==="Parent")p.name="Santi";});
 if(!scores.players.some(p=>p.name==="Dani"))scores.players.push({name:"Dani",points:0});
 
-function total(){return scores.players.reduce((a,p)=>a+(+p.points||0),0);}
+function migrate(){ if(scores.carry1029) return false; scores.bonus=(+scores.bonus||0)+48; scores.carry1029=true; return true; }
+function total(){return (+scores.bonus||0)+scores.players.reduce((a,p)=>a+(+p.points||0),0);}
 function renderJar(){
   const t=total();
   document.getElementById("total").textContent=t;
   document.getElementById("goal").textContent=GOAL;
   document.getElementById("beans").innerHTML=Array.from({length:GOAL},(_,i)=>`<span class="bean ${i<t?"on":""}"></span>`).join("");
   document.getElementById("win").hidden = t<GOAL;
-  document.getElementById("jarsDone").textContent = scores.jars ? `Jars filled so far: ${scores.jars}` : "";
+  document.getElementById("jarsDone").textContent = [scores.bonus ? `Includes ${scores.bonus} beans from Thu, Oct 29 (Tomas + Sofia)` : "", scores.jars ? `Jars filled so far: ${scores.jars}` : ""].filter(Boolean).join(" · ");
   const box=document.getElementById("players");
   const active=document.activeElement && document.activeElement.dataset.name;
   if(active!==undefined){ // don't rebuild while someone types a name
@@ -395,10 +396,11 @@ document.getElementById("resetBtn").onclick=()=>{confirmEl.hidden=false;};
 document.getElementById("confirmNo").onclick=()=>{confirmEl.hidden=true;};
 document.getElementById("confirmYes").onclick=()=>{
   if(total()>=GOAL) scores.jars=(scores.jars||0)+1;
-  scores.players.forEach(p=>p.points=0); confirmEl.hidden=true; changed();
+  scores.players.forEach(p=>p.points=0); scores.bonus=0; confirmEl.hidden=true; changed();
 };
 
 render(); renderJar();
+if(migrate()) changed();
 statusEl.textContent="Saved on this phone";
 
 </script>
